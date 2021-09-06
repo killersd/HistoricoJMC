@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
@@ -12,13 +13,27 @@
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
 <title>Cadastrar Aluno</title>
 </head>
+<nav class="blue">
+	<div class="nav-wrapper">
+		<a href="#" class="brand-logo">Cadastrar Aluno</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		
+			<li><a href="/alunos" class="waves-effect waves-light btn"><i
+			class="material-icons left">format_list_bulleted</i>Lista de Alunos</a></li>	
+			<li><a href="/"><i class="material-icons left">home</i></a></li>
+		</ul>
+	</div>
+</nav>
 <body>
-	<h2>Cadastrar Aluno</h2>
+	<div align="center"><h4><b>Cadastro de Alunos</b></h4></div>
 	<h3>
-		<a href="/alunos" class="waves-effect waves-light btn"><i
-			class="material-icons left">format_list_bulleted</i>Lista de Alunos</a>
+		
 	</h3>
 	<form class="container" method="post">
 		<div class="row">
@@ -26,16 +41,16 @@
 				Nome do aluno: <input type="text" value="" name="nome" />
 			</div>
 			<div class="input-field col s12">
-				Nome do pai: <input type="text" value="" name="pai" />
+				Nome do pai: <input type="text" value="" name="mome_pai" />
 			</div>
 			<div class="input-field col s12">
-				Nome da mãe: <input type="text" value="" name="mae" />
+				Nome da mãe: <input type="text" value="" name="nome_mae" />
 			</div>
 			<div class="input-field col s6">
-				Data de Nascimento: <input type="date" value="" name="dataNasc" />
+				Data de Nascimento: <input type="date" value="" name="data_nasc" />
 			</div>
 			<div class="input-field col s6">
-				Ano da Pasta: <input type="text" value="" name="anoPasta" />
+				Ano da Pasta: <input type="text" value="" name="anostring" />
 			</div>
 		</div>
 		<button class="waves-effect waves-light btn" type="submit">

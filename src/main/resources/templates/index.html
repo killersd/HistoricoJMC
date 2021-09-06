@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
@@ -12,18 +13,31 @@
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta charset="UTF-8">
-<title>Histórico JMC</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>Página Inicial</title>
 </head>
-<body>
-	<h2>Lista de Alunos Cadastrados</h2>
-	<h3>
-		<a href="/cadastrarAluno" class="waves-effect waves-light btn"><i
+<nav class="blue">
+	<div class="nav-wrapper">
+		<a href="#" class="brand-logo">Escola Estadual João de Mattos Carvalho</a>
+		<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<a href="/cadastrarAluno" class="waves-effect waves-light btn"><i
 			class="material-icons left">add_circle_outline</i> Cadastrar Aluno</a>
+		</ul>
+	</div>
+</nav>
+<body>
+	<div align="center"><h4><b>Lista de Alunos Cadastrados</b></h4></div>
+	<h3>
+
 
 	</h3>
 	<table class="container">
 		<thead>
 			<tr>
+				<th>Código do Aluno</th>
 				<th>Nome do Aluno</th>
 				<th>Nome do Pai</th>
 				<th>Nome da Mãe</th>
@@ -33,11 +47,12 @@
 		</thead>
 		<tbody>
 			<tr th:each="aluno : ${alunos}">
+				<td><span th:text="${aluno.cod}"></span></td>
 				<td><span th:text="${aluno.nome}"></span></td>
-				<td><span th:text="${aluno.pai}"></span></td>
-				<td><span th:text="${aluno.mae}"></span></td>
-				<td><span th:text="${aluno.dataNasc}"></span></td>
-				<td><span th:text="${aluno.anoPasta}"></span></td>
+				<td><span th:text="${aluno.nome_pai}"></span></td>
+				<td><span th:text="${aluno.nome_mae}"></span></td>
+				<td><span th:text="${aluno.data_nasc}"></span></td>
+				<td><span th:text="${aluno.anostring}"></span></td>
 			</tr>
 		</tbody>
 	</table>

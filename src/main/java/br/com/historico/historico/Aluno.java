@@ -16,21 +16,53 @@ public class Aluno implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
-
+	private long cod;
 	private String nome;
-	private String pai;
-	private String mae;
-	private String dataNasc;
-	private String anoPasta;
+	private String nome_pai;
+	private String nome_mae;
+	private String data_nasc;
+	private String anostring;
 
-	public long getId() {
-		return id;
+	public long getCod() {
+		return cod;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public String getNome_pai() {
+		return nome_pai;
 	}
+
+	public String getNome_mae() {
+		return nome_mae;
+	}
+
+	public String getData_nasc() {
+		return data_nasc;
+	}
+
+	public String getAnostring() {
+		return anostring;
+	}
+
+	public void setCod(int cod) {
+		this.cod = cod;
+	}
+
+	public void setNome_pai(String nome_pai) {
+		this.nome_pai = nome_pai;
+	}
+
+	public void setNome_mae(String nome_mae) {
+		this.nome_mae = nome_mae;
+	}
+
+	public void setData_nasc(String data_nasc) {
+		this.data_nasc = data_nasc;
+	}
+
+	public void setAnostring(String anostring) {
+		this.anostring = anostring;
+	}
+
 
 	public String getNome() {
 		return nome;
@@ -40,35 +72,5 @@ public class Aluno implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getPai() {
-		return pai;
-	}
 
-	public void setPai(String pai) {
-		this.pai = pai;
-	}
-
-	public String getMae() {
-		return mae;
-	}
-
-	public void setMae(String mae) {
-		this.mae = mae;
-	}
-
-	public String getDataNasc() {
-		return dataNasc;
-	}
-
-	public void setDataNasc(String dataNasc) {
-		this.dataNasc = dataNasc;
-	}
-
-	public String getAnoPasta() {
-		return anoPasta;
-	}
-
-	public void setAnoPasta(String anoPasta) {
-		this.anoPasta = anoPasta;
-	}
 }
