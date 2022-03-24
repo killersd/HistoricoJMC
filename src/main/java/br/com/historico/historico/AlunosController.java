@@ -17,7 +17,7 @@ public class AlunosController {
 		return "alunos/formCadastro";
 	}
 
-	@RequestMapping(value = "/cadastrarAluno", method = RequestMethod.POST)
+	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public String cadastro(Aluno aluno) {
 		
 		ar.save(aluno);
