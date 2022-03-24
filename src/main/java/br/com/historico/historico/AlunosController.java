@@ -17,12 +17,12 @@ public class AlunosController {
 		return "alunos/formCadastro";
 	}
 
-	@RequestMapping(value = "/", method = RequestMethod.POST)
+	@RequestMapping(value = "/cadastrarAluno", method = RequestMethod.POST)
 	public String cadastro(Aluno aluno) {
 		
 		ar.save(aluno);
 		
-		return "index";
+		return "alunos/formCadastro";
 	}
 	
 	@RequestMapping("/alunos")
