@@ -22,7 +22,7 @@ public class AlunosController {
 		
 		ar.save(aluno);
 		
-		return "redirect:/formCadastro";
+		return "redirect:alunos/formCadastro";
 	}
 	
 	@RequestMapping("/alunos")
